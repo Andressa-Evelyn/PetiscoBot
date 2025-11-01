@@ -1,6 +1,6 @@
 import Config
 
 config :nostrum,
-  token: System.get_env("NOSTRUN_TOKEN"),
+  token: System.get_env("NOSTRUM_TOKEN"),
   gateway_intents: :all,
   ffmpeg: false

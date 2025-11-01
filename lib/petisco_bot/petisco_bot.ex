@@ -4,7 +4,7 @@ defmodule PetiscoBot do
   alias PetiscoBot.{Joke, Numbers, Weather, Crypto, Game}
 
   def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
-    case String.split(msg.content, " ") do #se o usuario nao mandar nd
+    case String.split(msg.content, " ") do #se o usuario nao mandar nd. comando parametro
       ["!joke"] ->
         send_message(msg, Joke.run()) #sem parametro
 

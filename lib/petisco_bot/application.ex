@@ -9,7 +9,7 @@ defmodule PetiscoBot.Application do
   def start(_type, _args) do
     children = [
       PetiscoBot,
-      {Finch, name: MyFinch}
+      {Finch, name: MyFinch},
       {Finch, name: PetiscoBot.Finch}
     ]
 

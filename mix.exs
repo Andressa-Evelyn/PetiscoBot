@@ -26,7 +26,7 @@ defmodule PetiscoBot.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:nostrum, "~> 0.10"},
       {:finch, "~> 0.20"},
-      {:jason, "~> 1.4"} 
+      {:jason, "~> 1.4"}
     ]
   end
 end
