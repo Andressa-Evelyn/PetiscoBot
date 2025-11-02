@@ -1,6 +1,8 @@
 # 1 parâmetro
+
 defmodule PetiscoBot.Crypto do
-  @moduledoc "Consulta o preço de uma criptomoeda em USD usando a CoinGecko API"
+  @moduledoc "Consulta o preço através do comando !crypto <moeda>. Onde moeda é o id usado pelo CoinGecko (ex: bitcoin, ethereum, dogecoin)"
+
   @api_url "https://api.coingecko.com/api/v3/simple/price"
 
   def run(coin) do #parâmetro
@@ -11,7 +13,7 @@ defmodule PetiscoBot.Crypto do
         body
         |> Jason.decode!()
         |> Map.get(coin, %{})
-        |> Map.get("usd", "desconhecido") #se não encontrar a coin, volta desconhecido
+        |> Map.get("usd", "desconhecido") 
         |> then(&"O preço atual de #{coin} é $#{&1}")
       _ ->
         "Erro ao consultar CoinGecko"

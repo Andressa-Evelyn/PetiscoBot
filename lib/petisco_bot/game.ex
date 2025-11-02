@@ -1,6 +1,7 @@
 #2 parâmetro
 defmodule PetiscoBot.Game do
-  @moduledoc "Mostra informações sobre Pokémon usando a PokéAPI"
+  @moduledoc "Mostra informações sobre Pokémon através do comando !pokemon <nome> <nível>. Exemplo: !pokemon pikachu 25"
+  
   @api_url "https://pokeapi.co/api/v2/pokemon"
 
   def run(pokemon, level) do

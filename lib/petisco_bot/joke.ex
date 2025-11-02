@@ -1,7 +1,8 @@
-# sem parâmetro
+# Sem parâmetro
 
 defmodule PetiscoBot.Joke do
-  @moduledoc "Conta uma piada usando a JokeAPI"
+  @moduledoc "Conta uma piada através do comando !joke"
+  
   @api_url "https://v2.jokeapi.dev/joke/Any?type=single"
 
   def run do

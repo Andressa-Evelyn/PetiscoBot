@@ -4,9 +4,12 @@ defmodule PetiscoBot.Application do
   @moduledoc false
 
   use Application
+  require Logger
 
   @impl true
   def start(_type, _args) do
+     Logger.info("Iniciando PetiscoBot.Application...")
+
     children = [
       PetiscoBot,
       {Finch, name: MyFinch},
@@ -14,6 +17,10 @@ defmodule PetiscoBot.Application do
     ]
 
     opts = [strategy: :one_for_one, name: PetiscoBot.Supervisor]
-    Supervisor.start_link(children, opts)
+    #Supervisor.start_link(children, opts)
+    result = Supervisor.start_link(children, opts)
+
+    Logger.info("✅ Supervisor PetiscoBot iniciado com sucesso!")
+    result
   end
 end
